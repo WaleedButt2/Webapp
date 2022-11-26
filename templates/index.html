@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+{% load static %}
+<html>
+    <head>
+        <title>AI Journey</title>
+        <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    </head>
+    <body>
+        
+        <div class="banner">
+            <div class="navbar">
+                <img src="{% static '/images/logo.PNG' %}" class="logo" width = "150" height = "150">
+                <ul>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="content">
+                <h1>Im-Text Generation, sir.</h1>
+                <p>Go Wild or Go Home</p>
+                <div>
+                    <form action="landingpage" method="post">
+                        {% csrf_token %}
+                        <button type="submit">Home</button>
+                    </form>
+                    <button type="button"><span></span>Sign In</button>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
